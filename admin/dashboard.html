@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Admin Dashboard</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/styls.css">
 </head>
 <body>
-  <header>
-    <h1>Admin Dashboard</h1>
-    <nav>
-      <a href="dashboard.html">Orders</a>
-      <a href="manage-products.html">Manage Products</a>
-      <button onclick="logout()">Logout</button>
-    </nav>
-  </header>
+  <h2>🛠️ Admin Dashboard</h2>
 
-  <main style="padding: 2rem;">
-    <h2>All Orders</h2>
-    <div id="orders-container"></div>
-  </main>
+  <form id="productForm">
+    <input type="text" id="name" placeholder="Product Name" required>
+    <input type="number" id="price" placeholder="Price" required>
+    <input type="text" id="image" placeholder="Image URL" required>
+    <button type="submit">➕ Add Product</button>
+  </form>
 
-  <script src="../js/dashboard.js"></script>
+  <hr>
+
+  <h3>🛒 Product List</h3>
+  <div id="productList"></div>
+
+  <!-- Firebase scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/admin.js"></script>
 </body>
 </html>
