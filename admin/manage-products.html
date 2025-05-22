@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Products</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Manage Products</h1>
+    <nav>
+      <a href="dashboard.html">Orders</a>
+      <a href="manage-products.html">Manage Products</a>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main style="padding: 2rem;">
+    <h2>Add New Product</h2>
+    <form id="product-form">
+      <label>Product Name:</label><br/>
+      <input type="text" id="product-name" required><br/><br/>
+
+      <label>Price (৳):</label><br/>
+      <input type="number" id="product-price" required><br/><br/>
+
+      <label>Image URL:</label><br/>
+      <input type="text" id="product-image" required><br/><br/>
+
+      <button type="submit">Add Product</button>
+    </form>
+
+    <hr style="margin: 2rem 0" />
+    <h2>Existing Products</h2>
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <script src="../js/manage-products.js"></script>
+</body>
+</html>

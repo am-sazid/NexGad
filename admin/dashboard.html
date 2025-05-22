@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <nav>
+      <a href="dashboard.html">Orders</a>
+      <a href="manage-products.html">Manage Products</a>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main style="padding: 2rem;">
+    <h2>All Orders</h2>
+    <div id="orders-container"></div>
+  </main>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>
